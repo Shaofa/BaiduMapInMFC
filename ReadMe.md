@@ -14,11 +14,11 @@ Yes,so easy a desktop appliction!A Baidu Map centers in the capital of China and
 4. A new control will be added on the UI,allocate a unique id *`IDC_EXPLORER1`* for it;
 5. Right click on the *`IDC_EXPLORER1`* control in the UI,select *`Add Variables`* to add a variable for this control named *`m_explorer1`*.Two files *`explorer1.cpp`*,*`explorer1.h`* will be added to the project.Actully,this control is a Web browser like Internet Explorer,we build it in our appliction. 
 6. In the member function *`OnInitDialog()`*, we need to load a html file for the Browser.The file *`map.html`* in the codes is in the project directory,it will access the Baidu Map web service and present a map in the Browser.
-```c++
-TCHAR strCurDir[512];
-GetCurrentDirectory(sizeof(strCurDir), strCurDir);
-m_web.Navigate((CString)strCurDir+_T("\\map.html"), NULL, NULL, NULL, NULL);
-```
+	```c++
+	TCHAR strCurDir[512];
+	GetCurrentDirectory(sizeof(strCurDir), strCurDir);
+	m_web.Navigate((CString)strCurDir+_T("\\map.html"), NULL, NULL, NULL, NULL);
+	```
 7. Now,build the project,a Baidu Map is embedded in the *`IDC_EXPLORER1`* control;
 8. Next we need to call the Javascript functions defined in *`map.html`* to interact with the embedded Browser.
 9. Add two files into this project,*`WebPage.cpp`*,*`WebPage.h`*.They are open source and provides the interface to access JS functions in C++;
