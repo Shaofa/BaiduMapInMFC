@@ -25,7 +25,7 @@ m_web.Navigate((CString)strCurDir+_T("\\map.html"), NULL, NULL, NULL, NULL);
 10. Instantiate an object of clsses CWebPage,named *`m_web`*;
 11. Add a Message Handler of the PushButton;
 12. In the Message Handler,we try to call a JS function to draw some polyLines on the top level of the map:
-```
+```c++
 void CBaiduMapInMFCDlg::OnBnClickedBtnPolyline()
 {
 	CWebPage page;
